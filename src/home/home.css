@@ -144,7 +144,7 @@
     grid-gap: 16px !important;
   }
   .nameContent {
-    font-size: 1.6rem;
+    font-size: 75% !important;
     padding-block-start: 10%;
   }
   .position {
