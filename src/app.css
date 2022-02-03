@@ -77,10 +77,10 @@ html {
   overflow-y: scroll;
 }
 
-@media all and (max-width: 768px) {
-  html {
+@media only screen and (max-width: 768px) {
+  /* html {
     font-size: 95% !important;
-  }
+  } */
   .leftNav {
     display: none;
   }
@@ -94,7 +94,7 @@ html {
   }
 }
 
-@media all and (max-width: 412px) {
+@media only screen and (max-width: 412px) {
   html {
     font-size: 75% !important;
   }
