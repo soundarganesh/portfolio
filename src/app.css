@@ -77,7 +77,7 @@ html {
   overflow-y: scroll;
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
   html {
     font-size: 95% !important;
   }
@@ -94,7 +94,7 @@ html {
   }
 }
 
-@media screen and (max-width: 412px) {
+@media all and (max-width: 412px) {
   html {
     font-size: 75% !important;
   }

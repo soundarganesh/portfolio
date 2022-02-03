@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and (max-width: 786px) {
+@media all and (max-width: 786px) {
   .scrollContainer {
     position: fixed;
     bottom: 2%;

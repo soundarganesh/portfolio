@@ -96,7 +96,7 @@
   grid-template-columns: repeat(3, auto);
   grid-gap: 44px;
 }
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
   .profileContainer {
     display: grid;
     grid-auto-flow: row;

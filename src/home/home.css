@@ -119,7 +119,7 @@
   height: 75%;
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
   .rightPanel img {
     width: 88%;
     height: 88%;
@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (max-width: 412px) {
+@media all and (max-width: 412px) {
   .rightPanel,
   .leftPanel {
     padding-block: 5%;
