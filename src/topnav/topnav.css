@@ -77,7 +77,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 80% 20%;
-    height: max-content;
+    height: 50%;
     width: 100%;
     position: absolute;
     background-color: var(--bg-black-matte);

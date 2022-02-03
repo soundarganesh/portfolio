@@ -120,8 +120,13 @@
 }
 
 @media all and (max-width: 768px) {
+  .rightPanel {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
   .rightPanel img {
-    width: 88%;
+    width: 85%;
     height: 88%;
   }
   .homeContainer {

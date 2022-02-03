@@ -98,4 +98,7 @@ html {
   html {
     font-size: 75% !important;
   }
+  .bodyContainer {
+    overflow: hidden !important;
+  }
 }
