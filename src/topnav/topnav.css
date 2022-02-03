@@ -1,0 +1,147 @@
+.topNavContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 5% 40% 40% 15%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.home {
+  display: grid;
+  justify-content: center;
+}
+.home img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.name {
+  display: grid;
+  justify-content: start;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #eae9ea;
+}
+.menu {
+  display: grid;
+  justify-content: flex-end;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-gap: 28px;
+  font-size: 0.8rem;
+}
+.menuItem {
+  padding-block: 5px;
+  cursor: pointer;
+}
+.menuItem:hover {
+  color: var(--bg-gold);
+}
+.menuItem.active {
+  border-bottom: solid 2px var(--bg-gold);
+  color: var(--bg-gold);
+  font-weight: 600;
+}
+.connect {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: flex-end;
+  grid-gap: 20px;
+  padding-inline: 20px;
+}
+.connect img {
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.mobileTopNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .topNavContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 15% 50% 35%;
+  }
+  .menu {
+    display: none;
+  }
+  .mobileTopNav {
+    opacity: 1;
+    z-index: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 80% 20%;
+    height: max-content;
+    width: 100%;
+    position: absolute;
+    background-color: var(--bg-black-matte);
+    border-bottom: solid 5px var(--bg-gold);
+  }
+  .mobileMenuList {
+    padding: 5%;
+    display: grid;
+    height: max-content;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+  .closeButton {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .menuItem.active {
+    border: none;
+    color: var(--bg-gold);
+    font-weight: 600;
+  }
+  .home {
+    /* border: solid 1px var(--bg-gold); */
+    /* animation: blinker 1.5s ease infinite; */
+    transform: translate3d(0, 0, 0);
+    animation-name: shake;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes shake {
+    2%,
+    18% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    4%,
+    16% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    6%,
+    10%,
+    14% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    8%,
+    12% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    18.1% {
+      transform: translate3d(0px, 0, 0);
+    }
+  }
+}

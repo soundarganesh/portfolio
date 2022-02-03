@@ -1,0 +1,41 @@
+.progressContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.progressBar,
+.progressTitle,
+.progressContent {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+.progressTitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.progressContent {
+  padding-block-start: 5px;
+  padding-inline: 10px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  width: 100%;
+  text-align: center;
+}
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 2.2em;
+  font-weight: 100;
+  color: #555;
+  user-select: none;
+}

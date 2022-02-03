@@ -1,0 +1,39 @@
+.scrollContainer {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bg-gold);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+.scrollContainer img {
+  width: 2rem;
+  height: 2rem;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(-2px);
+  }
+  to {
+    transform: translateY(2px);
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .scrollContainer {
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--bg-gold);
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+  }
+}

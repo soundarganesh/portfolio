@@ -1,0 +1,77 @@
+.contactContainer {
+  width: 100%;
+  height: max-content;
+  padding: 10%;
+}
+
+.divider {
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--bg-gold);
+}
+.letsChat {
+  padding-block-start: 15%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content max-content;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.connect {
+  color: var(--bg-gold);
+}
+.explore {
+  padding-block-start: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content max-content;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.explore a {
+  color: var(--bg-gold);
+}
+.socialMedia {
+  padding-block-start: 15%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  grid-gap: 44px;
+}
+.socialMedia img {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .explore {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+  }
+  .explore a {
+    display: grid;
+    justify-content: center;
+  }
+  .socialMedia {
+    padding-block-start: 15%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: center;
+    grid-gap: 28px;
+  }
+}

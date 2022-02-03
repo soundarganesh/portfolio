@@ -1,0 +1,44 @@
+.cardContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 5% 12% 78%;
+  width: 22rem;
+  height: 7rem;
+  background-color: var(--bg-black-matte);
+  box-shadow: 0px 5px 5px var(--bg-black);
+}
+.term {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-auto-flow: row;
+  grid-auto-rows: 35% 65%;
+  background-color: var(--bg-gold);
+  color: var(--bg-black-matte);
+  height: 100%;
+}
+.term .termCount {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transform: rotate(90deg);
+}
+.term .termCategory {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transform: rotate(90deg);
+}
+.description {
+  display: grid;
+  grid-gap: 12px;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.description .title {
+  font-weight: 600;
+  color: var(--bg-gold);
+}

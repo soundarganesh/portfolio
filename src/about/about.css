@@ -1,0 +1,106 @@
+.aboutContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 50% 50%;
+  color: var(--bg-white);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.leftPanel {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.rightPanel {
+  display: grid;
+  align-items: center;
+  padding: 10%;
+}
+.rightPanel .about {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.textME {
+  color: var(--bg-gold);
+}
+.liner {
+  padding-block-start: 20px;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.aboutHeading {
+  width: 100%;
+  height: max-content;
+  font-size: 1rem;
+  padding-block-start: 60px;
+  font-weight: 600;
+}
+.aboutContent {
+  width: 100%;
+  height: max-content;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding-block-start: 20px;
+}
+.downloadCV {
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 30px;
+  height: 2rem;
+  width: 10rem;
+  border: solid 1px var(--bg-gold);
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.downloadCV a {
+  text-decoration: none;
+  color: inherit;
+}
+.downloadCV:hover {
+  background-color: var(--bg-gold);
+  color: var(--bg-black-matte);
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    grid-auto-columns: auto;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+    grid-gap: 24px;
+  }
+}
+
+.card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  height: max-content;
+  width: 100%;
+  grid-gap: 24px;
+}
+
+@media screen and (max-width: 412px) {
+  .aboutHeading {
+    padding-block-start: 30px;
+  }
+}

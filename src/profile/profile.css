@@ -1,0 +1,134 @@
+.profileContainer {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 55% 45%;
+  align-items: center;
+  grid-gap: 42px;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+.skillsContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.skills {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  width: 100%;
+}
+.line {
+  height: 0.2rem;
+  width: 5rem;
+  background-color: var(--bg-gold);
+}
+.textSkills {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.skillsProgressContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-inline: 5rem;
+}
+
+.otherSkills {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 50% 50%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10%;
+}
+
+.technicalSkills {
+  display: grid;
+  justify-content: center;
+  height: max-content;
+  grid-gap: 28px;
+  width: 100%;
+}
+.techSkillsHeading {
+  display: grid;
+  justify-content: center;
+}
+.techSkillsHeadingText {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 15rem;
+  background-color: var(--bg-gold);
+  color: var(--bg-black-matte);
+  font-weight: 600;
+}
+.tile {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 20px;
+}
+.hobbies {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  grid-gap: 44px;
+  width: 100%;
+}
+.hobbyContainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 44px;
+}
+@media screen and (max-width: 768px) {
+  .profileContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    align-items: center;
+    grid-gap: 60px;
+    height: max-content;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 5rem;
+  }
+  .skillsProgressContainer,
+  .otherSkills {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    grid-auto-columns: auto;
+    grid-gap: 44px;
+  }
+  .hobbies {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    grid-gap: 22px;
+    width: 100%;
+  }
+  .hobbyContainer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 28px;
+  }
+}
