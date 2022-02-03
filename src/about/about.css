@@ -99,7 +99,7 @@
   grid-gap: 24px;
 }
 
-@media all and (max-width: 412px) {
+@media all and (max-width: 480px) {
   .aboutHeading {
     padding-block-start: 30px;
   }

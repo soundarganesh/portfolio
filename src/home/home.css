@@ -135,7 +135,7 @@
   }
 }
 
-@media all and (max-width: 412px) {
+@media all and (max-width: 480px) {
   .rightPanel,
   .leftPanel {
     padding-block: 5%;
