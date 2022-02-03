@@ -144,7 +144,7 @@
     grid-gap: 16px !important;
   }
   .nameContent {
-    font-size: 75% !important;
+    font-size: 1.6rem;
     padding-block-start: 10%;
   }
   .position {
@@ -154,7 +154,7 @@
     padding-block-start: 8%;
   }
   .rightPanel img {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
   }
 }

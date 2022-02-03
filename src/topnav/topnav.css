@@ -82,6 +82,7 @@
     position: absolute;
     background-color: var(--bg-black-matte);
     border-bottom: solid 5px var(--bg-gold);
+    align-items: center;
   }
   .mobileMenuList {
     padding: 5%;
@@ -94,9 +95,10 @@
   }
   .closeButton {
     display: grid;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: max-content;
     width: 100%;
   }
   .menuItem.active {
