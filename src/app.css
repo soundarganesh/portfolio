@@ -90,7 +90,7 @@ html {
     grid-auto-columns: auto;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden !important;
   }
 }
 
