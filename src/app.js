@@ -13,6 +13,10 @@ import ContactComponent from './contact';
 import { ScrollToTop } from './components/scroll/scrollToTop';
 
 import styles from './app.css';
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 function App() {
   let sections = null;

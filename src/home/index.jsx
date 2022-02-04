@@ -89,7 +89,9 @@ export default function HomeComponent() {
         </div>
       </div>
       <div className={styles.rightPanel}>
-        <img src={Profile} alt="Logo" />
+        <div style={{ textAlign: 'center' }}>
+          <img src={Profile} alt="Logo" />
+        </div>
       </div>
     </div>
   );

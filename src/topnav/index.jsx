@@ -5,7 +5,6 @@ import Twitter from '../common/resources/twitter.svg';
 import LinkedIn from '../common/resources/linkedin.svg';
 import CloseIcon from './resources/close.png';
 
-// import { TweenMax, Power3 } from 'gsap';
 import { gsap } from 'gsap';
 
 import { MENU } from '../common/constant';
