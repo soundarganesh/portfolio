@@ -48,6 +48,8 @@ html {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 .bodyContainer {
   display: grid;
@@ -92,6 +94,8 @@ html {
     height: 100%;
     width: 100%;
     overflow: hidden !important;
+    position: relative;
+    height: 100%;
   }
 }
 
@@ -101,5 +105,7 @@ html {
   }
   .bodyContainer {
     overflow: hidden !important;
+    position: relative;
+    height: 100%;
   }
 }
