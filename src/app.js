@@ -8,6 +8,7 @@ import TopNavComponent from './topnav';
 import HomeComponent from './home';
 import AboutComponent from './about';
 import ProfileComponent from './profile';
+import WorksComponent from './works';
 import ContactComponent from './contact';
 
 import { ScrollToTop } from './components/scroll/scrollToTop';
@@ -86,6 +87,7 @@ function App() {
           <HomeComponent />
           <AboutComponent />
           <ProfileComponent />
+          {/* <WorksComponent /> */}
           <ContactComponent />
         </div>
       </div>

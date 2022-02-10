@@ -71,16 +71,16 @@ export default function ProfileComponent() {
             <TileComponent imageSource={GithubIcon} title="Github" />
           </div>
         </div>
-        <div className={styles.hobbies}>
+        <div className={styles.technicalSkills}>
           <div className={styles.techSkillsHeading}>
             <div className={styles.techSkillsHeadingText}>HOBBIES</div>
           </div>
-          <div className={styles.hobbyContainer}>
-            <img src={StockIcon} alt="Stock" />
-            <img src={FootballIcon} alt="Football" />
-            <img src={VideoIcon} alt="Videography" />
-            <img src={CookingIcon} alt="Cooking" />
-            <img src={CurlIcon} alt="Workout" />
+          <div className={styles.hobbies}>
+            <TileComponent imageSource={StockIcon} title="Share Market" />
+            <TileComponent imageSource={FootballIcon} title="Football" />
+            <TileComponent imageSource={VideoIcon} title="Photography" />
+            <TileComponent imageSource={CookingIcon} title="Cooking" />
+            <TileComponent imageSource={CurlIcon} title="Workout" />
           </div>
         </div>
       </div>

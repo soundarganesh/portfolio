@@ -1,7 +1,7 @@
 .profileContainer {
   display: grid;
   grid-auto-flow: row;
-  grid-auto-rows: 55% 45%;
+  grid-auto-rows: 50% 50%;
   align-items: center;
   grid-gap: 42px;
   height: 100%;
@@ -83,18 +83,9 @@
 }
 .hobbies {
   display: grid;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  grid-gap: 44px;
-  width: 100%;
-}
-.hobbyContainer {
-  display: grid;
-  align-items: center;
-  justify-content: center;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 44px;
+  justify-content: center;
+  grid-gap: 20px;
 }
 @media all and (max-width: 768px) {
   .profileContainer {
@@ -115,20 +106,5 @@
     grid-auto-rows: max-content;
     grid-auto-columns: auto;
     grid-gap: 44px;
-  }
-  .hobbies {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: max-content;
-    grid-gap: 22px;
-    width: 100%;
-  }
-  .hobbyContainer {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 28px;
   }
 }

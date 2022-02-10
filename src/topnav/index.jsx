@@ -47,13 +47,27 @@ export default function TopNavComponent() {
     const scrollDiv = document.getElementById('mainContainer');
     const targetElement = document.getElementsByClassName(target);
     if (scrollDiv && targetElement.length) {
+      var width = window.innerWidth;
+      const topValue = width < 768 ? targetElement[0].offsetTop + 40 : targetElement[0].offsetTop - 50;
       scrollDiv.scrollTo({
-        top: targetElement[0].offsetTop - 70,
+        top: topValue,
         behavior: 'smooth',
       });
     }
   };
 
+  const onHomeIconClick = () => {
+    setOpenMobileMenu(true);
+    var width = window.innerWidth;
+    if (width < 768) {
+      return;
+    }
+    const scrollDiv = document.getElementById('mainContainer');
+    scrollDiv.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <>
       {openMobileMenu && (
@@ -89,9 +103,9 @@ export default function TopNavComponent() {
 
       <div className={styles.topNavContainer} ref={webTopNavRef}>
         <div
-          className={`${styles.home} home`}
+          className={`${styles.home} home `}
           onClick={() => {
-            setOpenMobileMenu(true);
+            onHomeIconClick();
           }}
         >
           <img src={HomeIcon} alt="Home" />
