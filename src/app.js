@@ -16,6 +16,8 @@ import { ScrollToTop } from './components/scroll/scrollToTop';
 import styles from './app.css';
 import smoothscroll from 'smoothscroll-polyfill';
 
+// const path = require('path');
+
 // kick off the polyfill!
 smoothscroll.polyfill();
 
@@ -55,15 +57,15 @@ function App() {
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if (scrollTop >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute('id');
+      if (scrollTop >= sectionTop - sectionHeight / 2) {
+        current = section.getAttribute('class');
       }
     });
     if (!current) return;
     navItems.forEach((navItem) => {
-      navItem.classList.remove('active');
-      if (navItem.classList.contains(current)) {
-        navItem.classList.add('active');
+      navItem.classList.remove(`src-topnav-active`);
+      if (navItem.getAttribute('id') === current.split(' ')[1]) {
+        navItem.classList.add(`src-topnav-active`);
       }
     });
   };

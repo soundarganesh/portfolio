@@ -12,7 +12,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   optimization: {
-    // We no not want to minimize our code.
+    // We do not want to minimize our code.
     minimize: false,
   },
   devtool: 'source-map',
@@ -31,7 +31,10 @@ module.exports = {
         loader: 'css-loader',
         test: /\.css$/,
         options: {
-          modules: true,
+          modules: {
+            localIdentName: '[path][local]',
+          },
+          import: true,
         },
       },
       {

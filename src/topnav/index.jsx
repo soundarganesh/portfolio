@@ -121,7 +121,6 @@ export default function TopNavComponent() {
                 onClick={() => {
                   onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`);
                   setActivePage(menuItems);
-                  // navigate(`${menuItems !== 'Home' ? `/${menuItems.toLocaleLowerCase()}` : `/`}`);
                 }}
               >
                 {menuItems.toUpperCase()}
