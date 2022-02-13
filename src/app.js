@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDom from 'react-dom';
+import _ from 'lodash';
 
 import { gsap } from 'gsap';
-// import LandingPageComponent from './landing';
 import LeftNavComponent from './leftnav';
 import TopNavComponent from './topnav';
 import HomeComponent from './home';
@@ -39,7 +39,7 @@ function App() {
   //   setIsLoading(false);
   // }, [7000]);
   // }, []);
-  const onMainContainerScroll = (event) => {
+  const onMainContainerScroll = _.debounce(function (event) {
     let current = null;
     const scrollDiv = document.getElementById('mainContainer');
     if (!sections) {
@@ -68,7 +68,7 @@ function App() {
         navItem.classList.add(`src-topnav-active`);
       }
     });
-  };
+  }, 500);
   return (
     // <>
     /* {isLoading ? (

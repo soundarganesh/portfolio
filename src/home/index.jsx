@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import Profile from './resources/profile2.png';
+import Profile from './resources/profile5.png';
 import styles from './home.css';
 
 export default function HomeComponent() {
@@ -33,7 +33,7 @@ export default function HomeComponent() {
       },
     });
     gsap.fromTo(q('img'), { opacity: 0 }, { opacity: 1, duration: 3, delay: 3 });
-    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 3, delay: 7 });
+    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 3, delay: 6 });
   }, []);
 
   const onContactClick = () => {

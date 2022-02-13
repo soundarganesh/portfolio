@@ -35,9 +35,9 @@ export default function TopNavComponent() {
   useLayoutEffect(
     function mobileAnimations() {
       if (openMobileMenu) {
-        gsap.fromTo(mobileTopNavRef.current, { y: -150 }, { y: 0, duration: 1.5 });
+        gsap.fromTo(mobileTopNavRef.current, { y: -150 }, { y: 0, duration: 1 });
       } else {
-        gsap.fromTo(mobileTopNavRef.current, { y: 0 }, { y: -150, duration: 1.5 });
+        gsap.fromTo(mobileTopNavRef.current, { y: 0 }, { y: -150, duration: 1 });
       }
     },
     [openMobileMenu]
