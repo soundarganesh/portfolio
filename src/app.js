@@ -16,9 +16,6 @@ import { ScrollToTop } from './components/scroll/scrollToTop';
 import styles from './app.css';
 import smoothscroll from 'smoothscroll-polyfill';
 
-// const path = require('path');
-
-// kick off the polyfill!
 smoothscroll.polyfill();
 
 function App() {
@@ -30,23 +27,16 @@ function App() {
 
   const q = gsap.utils.selector(loadingRef);
 
-  // useEffect(function loadingComponents() {
-  // gsap.fromTo(q('.upperDiv'), { x: '0%' }, { x: '-100%', duration: 3, delay: 2 });
-  // gsap.fromTo(q('.lowerDiv'), { x: '0%' }, { x: '100%', duration: 3, delay: 2 });
-
-  // setTimeout(() => {
-  //   loadingRef.current = null;
-  //   setIsLoading(false);
-  // }, [7000]);
-  // }, []);
   const onMainContainerScroll = _.debounce(function (event) {
     let current = null;
     const scrollDiv = document.getElementById('mainContainer');
     if (!sections) {
-      sections = document.querySelectorAll('#homeContainer, #aboutContainer, #profileContainer, #contactContainer');
+      sections = document.querySelectorAll(
+        '#homeContainer, #aboutContainer, #profileContainer, #worksContainer, #contactContainer'
+      );
     }
     if (!navItems) {
-      navItems = document.querySelectorAll('#nav-home, #nav-about, #nav-profile, #nav-contact');
+      navItems = document.querySelectorAll('#nav-home, #nav-about, #nav-profile, #nav-works, #nav-contact');
     }
     const scrollTop = scrollDiv.scrollTop;
     if (scrollTop > 500) {
@@ -70,13 +60,6 @@ function App() {
     });
   }, 500);
   return (
-    // <>
-    /* {isLoading ? (
-        <div className={styles.landingContainer} ref={loadingRef}>
-          <div className={`${styles.upperDiv} upperDiv`} />
-          <div className={`${styles.lowerDiv} lowerDiv`} />
-        </div>
-      ) : ( */
     <div className={styles.container}>
       <div className={styles.topNav}>
         <TopNavComponent />
@@ -89,14 +72,12 @@ function App() {
           <HomeComponent />
           <AboutComponent />
           <ProfileComponent />
-          {/* <WorksComponent /> */}
+          <WorksComponent />
           <ContactComponent />
         </div>
       </div>
       {showScrollToTopIcon && <ScrollToTop />}
     </div>
-    //   )}
-    // </>
   );
 }
 

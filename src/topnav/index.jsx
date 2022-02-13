@@ -59,7 +59,7 @@ export default function TopNavComponent() {
   const onHomeIconClick = () => {
     setOpenMobileMenu(true);
     var width = window.innerWidth;
-    if (width < 768) {
+    if (width < 800) {
       return;
     }
     const scrollDiv = document.getElementById('mainContainer');
