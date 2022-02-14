@@ -9,10 +9,10 @@ import HomeComponent from './home';
 import AboutComponent from './about';
 
 const ProfileComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 1000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 3000))
 );
 const WorksComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 2000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 3000))
 );
 const ContactComponent = React.lazy(
   () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 3000))

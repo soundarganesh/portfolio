@@ -33,7 +33,7 @@ export default function HomeComponent() {
       },
     });
     gsap.fromTo(q('img'), { opacity: 0 }, { opacity: 1, duration: 3, delay: 2 });
-    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 3, delay: 5 });
+    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2, delay: 4 });
   }, []);
 
   const onContactClick = () => {

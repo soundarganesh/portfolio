@@ -7,7 +7,7 @@ import styles from './leftnav.css';
 export default function LeftNavComponent() {
   const leftNavRef = useRef();
   useEffect(function renderAnimation() {
-    gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 5, delay: 1 });
+    gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 4, delay: 1 });
   }, []);
 
   return (

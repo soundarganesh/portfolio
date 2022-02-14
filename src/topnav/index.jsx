@@ -21,7 +21,7 @@ export default function TopNavComponent() {
   useLayoutEffect(function webAnimations() {
     gsap
       .timeline()
-      .fromTo(q('.name'), { y: -70 }, { y: 0, duration: 0.5, delay: 3 })
+      .fromTo(q('.name'), { y: -70 }, { y: 0, duration: 0.5, delay: 2.5 })
       .fromTo(q('.menu'), { y: -70 }, { y: 0, duration: 0.5 })
       .fromTo(q('.connect'), { y: -70 }, { y: 0, duration: 0.5 })
       .from(q('.home'), {

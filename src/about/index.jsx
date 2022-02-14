@@ -11,7 +11,7 @@ export default function AboutComponent() {
   const q = gsap.utils.selector(aboutContainerRef);
 
   useEffect(function renderAnimation() {
-    gsap.fromTo(aboutContainerRef.current, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 3, delay: 5 });
+    gsap.fromTo(aboutContainerRef.current, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 2, delay: 4 });
   }, []);
 
   return (
