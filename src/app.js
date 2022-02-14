@@ -9,13 +9,13 @@ import HomeComponent from './home';
 import AboutComponent from './about';
 
 const ProfileComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 2000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 1000))
 );
 const WorksComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 3000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 2000))
 );
 const ContactComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 4000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 3000))
 );
 
 import { ScrollToTop } from './components/scroll/scrollToTop';
