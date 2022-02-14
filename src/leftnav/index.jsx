@@ -7,14 +7,14 @@ import styles from './leftnav.css';
 export default function LeftNavComponent() {
   const leftNavRef = useRef();
   useEffect(function renderAnimation() {
-    gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 6, delay: 1 });
+    gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 5, delay: 1 });
   }, []);
 
   return (
     <div className={styles.container} ref={leftNavRef}>
       <div className={styles.navigator}>
         {Object.values(MENU).map((menuItems) => {
-          return <NavigatorComponent key={menuItems} isActive={menuItems === 'Home'} />;
+          return <NavigatorComponent uniqueKey={menuItems} isActive={menuItems === 'Home'} />;
         })}
       </div>
       <div className={styles.scroll}>
@@ -27,15 +27,15 @@ export default function LeftNavComponent() {
 }
 
 function NavigatorComponent(props) {
-  const { key, isActive } = props;
+  const { uniqueKey, isActive } = props;
   return (
     <>
       {isActive ? (
-        <div id={key} className={`${styles.navCircle}`}>
+        <div key={uniqueKey} className={`${styles.navCircle}`}>
           <div className={`${styles.navDotActive}`}></div>
         </div>
       ) : (
-        <span id={key} className={`${styles.navDot}`}></span>
+        <span key={uniqueKey} className={`${styles.navDot}`}></span>
       )}
     </>
   );

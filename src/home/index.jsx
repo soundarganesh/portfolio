@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import Profile from './resources/profile5.png';
+import Profile from './resources/profile4.png';
 import styles from './home.css';
 
 export default function HomeComponent() {
@@ -16,24 +16,24 @@ export default function HomeComponent() {
       x: 300,
       autoAlpha: 0,
       ease: 'elastic.out(1, 1)',
-      delay: 1,
+      // delay: 1,
       stagger: {
         each: 0.75,
         amount: 0.5,
       },
     });
-    gsap.fromTo(q('.position'), { y: -50, opacity: 0 }, { opacity: 1, y: 0, duration: 1, delay: 2 });
+    gsap.fromTo(q('.position'), { y: -50, opacity: 0 }, { opacity: 1, y: 0, duration: 1, delay: 1 });
     gsap.from(q('.description div'), 1.8, {
       y: 100,
       ease: 'power4.out',
-      delay: 2,
+      delay: 1,
       skewY: 7,
       stagger: {
         amount: 0.3,
       },
     });
-    gsap.fromTo(q('img'), { opacity: 0 }, { opacity: 1, duration: 3, delay: 3 });
-    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 3, delay: 6 });
+    gsap.fromTo(q('img'), { opacity: 0 }, { opacity: 1, duration: 3, delay: 2 });
+    gsap.fromTo(q('.leftBottom'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 3, delay: 5 });
   }, []);
 
   const onContactClick = () => {

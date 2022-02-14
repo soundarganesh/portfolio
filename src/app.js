@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import _ from 'lodash';
 
@@ -7,9 +7,16 @@ import LeftNavComponent from './leftnav';
 import TopNavComponent from './topnav';
 import HomeComponent from './home';
 import AboutComponent from './about';
-import ProfileComponent from './profile';
-import WorksComponent from './works';
-import ContactComponent from './contact';
+
+const ProfileComponent = React.lazy(
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 2000))
+);
+const WorksComponent = React.lazy(
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 3000))
+);
+const ContactComponent = React.lazy(
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 4000))
+);
 
 import { ScrollToTop } from './components/scroll/scrollToTop';
 
@@ -71,9 +78,11 @@ function App() {
         <div className={styles.mainContainer} id="mainContainer" onScroll={onMainContainerScroll}>
           <HomeComponent />
           <AboutComponent />
-          <ProfileComponent />
-          <WorksComponent />
-          <ContactComponent />
+          <Suspense fallback={<div>Loading ... </div>}>
+            <ProfileComponent />
+            <WorksComponent />
+            <ContactComponent />
+          </Suspense>
         </div>
       </div>
       {showScrollToTopIcon && <ScrollToTop />}
