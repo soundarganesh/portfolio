@@ -137,4 +137,7 @@
   .openWorkBox {
     min-width: 70px;
   }
+  .aboutHeading {
+    padding-block-start: 10px;
+  }
 }

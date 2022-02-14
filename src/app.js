@@ -77,13 +77,13 @@ function App() {
         <div className={styles.mainContainer} id="mainContainer" onScroll={onMainContainerScroll}>
           <HomeComponent />
           <AboutComponent />
-          <Suspense fallback={<div>Loading ... </div>}>
+          <Suspense fallback={<div className={styles.loading}>LOADING PROFILE ..! </div>}>
             <ProfileComponent />
           </Suspense>
-          <Suspense fallback={<div>Loading ... </div>}>
+          <Suspense fallback={<div className={styles.loading}>LOADING WORKS ..! </div>}>
             <WorksComponent />
           </Suspense>
-          <Suspense fallback={<div>Loading ... </div>}>
+          <Suspense fallback={<div className={styles.loading}>LOADING CONTACT ..! </div>}>
             <ContactComponent />
           </Suspense>
         </div>
