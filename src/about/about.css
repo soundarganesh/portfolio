@@ -74,7 +74,7 @@
 }
 .downloadCV:hover {
   background-color: var(--bg-gold);
-  color: var(--bg-black-matte);
+  color: var(--bg-black);
 }
 
 @media all and (max-width: 768px) {

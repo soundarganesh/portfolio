@@ -7,12 +7,11 @@ import LeftNavComponent from './leftnav';
 import TopNavComponent from './topnav';
 import HomeComponent from './home';
 import AboutComponent from './about';
-
 const ProfileComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 3000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 1000))
 );
 const WorksComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 3000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 2000))
 );
 const ContactComponent = React.lazy(
   () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 3000))
@@ -80,7 +79,11 @@ function App() {
           <AboutComponent />
           <Suspense fallback={<div>Loading ... </div>}>
             <ProfileComponent />
+          </Suspense>
+          <Suspense fallback={<div>Loading ... </div>}>
             <WorksComponent />
+          </Suspense>
+          <Suspense fallback={<div>Loading ... </div>}>
             <ContactComponent />
           </Suspense>
         </div>

@@ -73,7 +73,7 @@
   height: 1.5rem;
   width: 15rem;
   background-color: var(--bg-gold);
-  color: var(--bg-black-matte);
+  color: var(--bg-black);
   font-weight: 600;
 }
 .tile {

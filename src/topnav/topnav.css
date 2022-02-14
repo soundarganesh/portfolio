@@ -81,7 +81,7 @@
     height: 35%;
     width: 100%;
     position: absolute;
-    background-color: var(--bg-black-matte);
+    background-color: var(--bg-black);
     border-bottom: solid 5px var(--bg-gold);
     align-items: center;
   }

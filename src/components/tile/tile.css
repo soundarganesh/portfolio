@@ -3,8 +3,8 @@
   width: 3.5rem;
   display: grid;
   grid-template-rows: 75% 25%;
-  background-color: var(--bg-black-matte);
-  box-shadow: 0px 5px 5px var(--bg-black);
+  background-color: var(--bg-black);
+  box-shadow: 0px 5px 5px var(--bg-black-matte);
   align-items: center;
   justify-content: center;
 }
