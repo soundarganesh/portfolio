@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 
 import { CardComponent } from '../../common/components/card';
@@ -10,7 +10,7 @@ export default function AboutComponent() {
   const aboutContainerRef = useRef();
   const q = gsap.utils.selector(aboutContainerRef);
 
-  useEffect(function renderAnimation() {
+  useLayoutEffect(function renderAnimation() {
     gsap.fromTo(aboutContainerRef.current, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 2, delay: 4 });
   }, []);
 

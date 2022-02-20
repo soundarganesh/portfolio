@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { gsap } from 'gsap';
@@ -10,7 +10,7 @@ export default function LeftNavComponent() {
   const activePage = useSelector((state) => state.activePage);
 
   const leftNavRef = useRef();
-  useEffect(function renderAnimation() {
+  useLayoutEffect(function renderAnimation() {
     gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 4, delay: 1 });
   }, []);
 

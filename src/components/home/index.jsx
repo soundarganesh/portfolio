@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 
 import Profile from './resources/profile4.png';
@@ -8,9 +8,7 @@ export default function HomeComponent() {
   const nameRef = useRef();
   const q = gsap.utils.selector(nameRef);
 
-  useEffect(function renderAnimation() {
-    const count = 37;
-
+  useLayoutEffect(function renderAnimation() {
     gsap.from(q('.nameContent'), {
       duration: 3,
       x: 300,
