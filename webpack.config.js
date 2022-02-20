@@ -1,19 +1,24 @@
 const path = require('path');
-
+const webpack = require('webpack');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public'),
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+  ],
   resolve: {
     // to make the babel load .jsx file extension
     extensions: ['', '.js', '.jsx'],
   },
   optimization: {
-    // We do not want to minimize our code.
-    minimize: false,
+    // minimize our code.
+    minimize: true,
   },
   devtool: 'source-map',
   module: {

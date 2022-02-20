@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import { gsap } from 'gsap';
 
+import { debounce } from './common/utils';
 import { setActivePage } from './redux';
 
 import LeftNavComponent from './components/leftnav';
@@ -39,7 +40,7 @@ export default function App() {
 
   const q = gsap.utils.selector(loadingRef);
 
-  const onMainContainerScroll = _.debounce(function (event) {
+  const onMainContainerScroll = debounce(function () {
     let current = null;
     const scrollDiv = document.getElementById('mainContainer');
     if (!sections) {
@@ -63,12 +64,6 @@ export default function App() {
     });
     if (!current) return;
 
-    // navItems.forEach((navItem) => {
-    //   navItem.classList.remove(`src-topnav-active`);
-    //   if (navItem.getAttribute('id') === current.split(' ')[1]) {
-    //     navItem.classList.add(`src-topnav-active`);
-    //   }
-    // });
     dispatch(setActivePage(current));
   }, 500);
   return (

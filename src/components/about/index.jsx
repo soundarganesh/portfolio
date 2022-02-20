@@ -1,9 +1,11 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect, Suspense } from 'react';
 import { gsap } from 'gsap';
 
 import { CardComponent } from '../../common/components/card';
 
-import Resume from './resources/resume.pdf';
+const Resume = React.lazy(
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./resources/resume.pdf')), 4000))
+);
 import styles from './about.css';
 
 export default function AboutComponent() {
@@ -38,9 +40,11 @@ export default function AboutComponent() {
             someone else ask for a sudden change in a different direction.
           </div>
           <div className={styles.downloadCV}>
-            <a href={Resume} download="CV_GaneshPandian.pdf">
-              DOWNLOAD CV
-            </a>
+            <Suspense fallback={<div className={styles.loading}>DOWNLOAD CV</div>}>
+              <a href={Resume} download="CV_GaneshPandian.pdf">
+                DOWNLOAD CV
+              </a>
+            </Suspense>
           </div>
         </div>
       </div>
