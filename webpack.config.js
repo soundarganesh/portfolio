@@ -6,7 +6,7 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: '[name].[contenthash].js',
+    filename: 'bundle.js',
     path: path.join(__dirname, 'public'),
   },
   plugins: [
