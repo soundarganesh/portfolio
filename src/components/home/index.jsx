@@ -14,7 +14,6 @@ export default function HomeComponent() {
       x: 300,
       autoAlpha: 0,
       ease: 'elastic.out(1, 1)',
-      // delay: 1,
       stagger: {
         each: 0.75,
         amount: 0.5,

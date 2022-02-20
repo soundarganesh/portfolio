@@ -18,7 +18,6 @@ export default function TopNavComponent() {
   const activePage = useSelector((state) => state.activePage);
   const dispatch = useDispatch();
 
-  // const [currentPage, setCurrentPage] = useState('Home');
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const mobileTopNavRef = useRef();
@@ -128,7 +127,6 @@ export default function TopNavComponent() {
                 id={`nav-${menuItems.toLocaleLowerCase()}`}
                 onClick={() => {
                   onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`, menuItems);
-                  // setCurrentPage(menuItems);
                 }}
               >
                 {menuItems.toUpperCase()}
