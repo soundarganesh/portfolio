@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -21,7 +21,7 @@ module.exports = {
   optimization: {
     // minimize our code.
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    // minimizer: [new TerserPlugin()],
   },
   devtool: 'source-map',
   module: {
