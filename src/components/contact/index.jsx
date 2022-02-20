@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Instagram from '../common/resources/instagram.svg';
-import Twitter from '../common/resources/twitter.svg';
-import LinkedIn from '../common/resources/linkedin.svg';
-import Github from '../common/resources/github.png';
+import Instagram from '../../common/resources/instagram.svg';
+import Twitter from '../../common/resources/twitter.svg';
+import LinkedIn from '../../common/resources/linkedin.svg';
+import Github from '../../common/resources/github.png';
 
 import styles from './contact.css';
 
 export default function ContactComponent() {
   return (
-    <div className={`${styles.contactContainer} nav-contact`} id="contactContainer">
+    <div className={`${styles.contactContainer} nav-contact`} id="Contact">
       <div className={styles.divider} />
       <div className={styles.letsChat}>
         <span>LET'S&nbsp;</span>

@@ -9,7 +9,7 @@ import styles from './works.css';
 
 export default function WorksComponent() {
   return (
-    <div className={`${styles.worksContainer} nav-works`} id="worksContainer">
+    <div className={`${styles.worksContainer} nav-works`} id="Works">
       <div className={styles.worksTitle}>
         <span className={styles.line} />
         <span className={styles.textWorks}>WORKS</span>

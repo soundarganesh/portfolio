@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import { CardComponent } from '../components/card';
+import { CardComponent } from '../../common/components/card';
 
 import Resume from './resources/resume.pdf';
 import styles from './about.css';
@@ -15,7 +15,7 @@ export default function AboutComponent() {
   }, []);
 
   return (
-    <div className={`${styles.aboutContainer} nav-about`} id="aboutContainer" ref={aboutContainerRef}>
+    <div className={`${styles.aboutContainer} nav-about`} id="About" ref={aboutContainerRef}>
       <div className={styles.rightPanel}>
         <div>
           <div className={styles.about}>

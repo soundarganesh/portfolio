@@ -1,6 +1,6 @@
 import React from 'react';
-import { ProgressComponent } from '../components/progress';
-import { TileComponent } from '../components/tile';
+import { ProgressComponent } from '../../common/components/progress';
+import { TileComponent } from '../../common/components/tile';
 
 import HTMLIcon from './resources/html5.png';
 import CSSIcon from './resources/css3.png';
@@ -23,7 +23,7 @@ import styles from './profile.css';
 
 export default function ProfileComponent() {
   return (
-    <div className={`${styles.profileContainer} nav-profile`} id="profileContainer">
+    <div className={`${styles.profileContainer} nav-profile`} id="Profile">
       <div className={styles.skillsContainer}>
         <div className={styles.skills}>
           <span className={styles.line} />

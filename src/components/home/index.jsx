@@ -57,7 +57,7 @@ export default function HomeComponent() {
     }
   };
   return (
-    <div className={`${styles.homeContainer} nav-home`} id="homeContainer" ref={nameRef}>
+    <div className={`${styles.homeContainer} nav-home`} id="home" ref={nameRef}>
       <div className={styles.leftPanel}>
         <div className={styles.name}>
           <div>

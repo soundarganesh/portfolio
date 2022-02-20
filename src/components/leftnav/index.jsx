@@ -1,10 +1,14 @@
 import React, { useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 import { gsap } from 'gsap';
-import { MENU } from '../common/constant';
+import { MENU } from '../../common/constant';
 
 import styles from './leftnav.css';
 
 export default function LeftNavComponent() {
+  const activePage = useSelector((state) => state.activePage);
+
   const leftNavRef = useRef();
   useEffect(function renderAnimation() {
     gsap.fromTo(leftNavRef.current, { x: -50 }, { x: 0, duration: 4, delay: 1 });
@@ -14,7 +18,7 @@ export default function LeftNavComponent() {
     <div className={styles.container} ref={leftNavRef}>
       <div className={styles.navigator}>
         {Object.values(MENU).map((menuItems) => {
-          return <NavigatorComponent uniqueKey={menuItems} isActive={menuItems === 'Home'} />;
+          return <NavigatorComponent uniqueKey={menuItems} isActive={menuItems === activePage} />;
         })}
       </div>
       <div className={styles.scroll}>

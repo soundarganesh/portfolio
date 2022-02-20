@@ -1,17 +1,24 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setActivePage } from '../../redux';
+
 import HomeIcon from './resources/home.png';
-import Instagram from '../common/resources/instagram.svg';
-import Twitter from '../common/resources/twitter.svg';
-import LinkedIn from '../common/resources/linkedin.svg';
+import Instagram from '../../common/resources/instagram.svg';
+import Twitter from '../../common/resources/twitter.svg';
+import LinkedIn from '../../common/resources/linkedin.svg';
 import CloseIcon from './resources/close.png';
 
 import { gsap } from 'gsap';
 
-import { MENU } from '../common/constant';
+import { MENU } from '../../common/constant';
 import styles from './topnav.css';
 
 export default function TopNavComponent() {
-  const [activePage, setActivePage] = useState('Home');
+  const activePage = useSelector((state) => state.activePage);
+  const dispatch = useDispatch();
+
+  // const [currentPage, setCurrentPage] = useState('Home');
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const mobileTopNavRef = useRef();
@@ -43,7 +50,8 @@ export default function TopNavComponent() {
     [openMobileMenu]
   );
 
-  const onMenuItemClick = (target) => {
+  const onMenuItemClick = (target, menuItem) => {
+    dispatch(setActivePage(menuItem));
     const scrollDiv = document.getElementById('mainContainer');
     const targetElement = document.getElementsByClassName(target);
     if (scrollDiv && targetElement.length) {
@@ -62,6 +70,7 @@ export default function TopNavComponent() {
     if (width < 800) {
       return;
     }
+    dispatch(setActivePage(MENU.Home));
     const scrollDiv = document.getElementById('mainContainer');
     scrollDiv.scrollTo({
       top: 0,
@@ -81,8 +90,7 @@ export default function TopNavComponent() {
                   id={`nav-${menuItems.toLocaleLowerCase()}`}
                   onClick={() => {
                     setOpenMobileMenu(false);
-                    onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`);
-                    setActivePage(menuItems);
+                    onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`, menuItems);
                   }}
                 >
                   {menuItems.toUpperCase()}
@@ -119,8 +127,8 @@ export default function TopNavComponent() {
                 className={`${styles.menuItem} ${menuItems === activePage ? `${styles.active}` : ``}`}
                 id={`nav-${menuItems.toLocaleLowerCase()}`}
                 onClick={() => {
-                  onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`);
-                  setActivePage(menuItems);
+                  onMenuItemClick(`nav-${menuItems.toLocaleLowerCase()}`, menuItems);
+                  // setCurrentPage(menuItems);
                 }}
               >
                 {menuItems.toUpperCase()}

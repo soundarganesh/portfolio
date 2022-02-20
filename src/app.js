@@ -1,30 +1,36 @@
 import React, { useState, useRef, Suspense } from 'react';
 import ReactDom from 'react-dom';
+import { useDispatch } from 'react-redux';
 import _ from 'lodash';
 
 import { gsap } from 'gsap';
-import LeftNavComponent from './leftnav';
-import TopNavComponent from './topnav';
-import HomeComponent from './home';
-import AboutComponent from './about';
+
+import { setActivePage } from './redux';
+
+import LeftNavComponent from './components/leftnav';
+import TopNavComponent from './components/topnav';
+import HomeComponent from './components/home';
+import AboutComponent from './components/about';
+
 const ProfileComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./profile')), 1000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./components/profile')), 1000))
 );
 const WorksComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./works')), 2000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./components/works')), 2000))
 );
 const ContactComponent = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./contact')), 3000))
+  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./components/contact')), 3000))
 );
 
-import { ScrollToTop } from './components/scroll/scrollToTop';
+import { ScrollToTop } from './common/components/scroll/scrollToTop';
 
 import styles from './app.css';
 import smoothscroll from 'smoothscroll-polyfill';
 
 smoothscroll.polyfill();
 
-function App() {
+export default function App() {
+  const dispatch = useDispatch();
   let sections = null;
   let navItems = null;
   const loadingRef = useRef();
@@ -37,9 +43,7 @@ function App() {
     let current = null;
     const scrollDiv = document.getElementById('mainContainer');
     if (!sections) {
-      sections = document.querySelectorAll(
-        '#homeContainer, #aboutContainer, #profileContainer, #worksContainer, #contactContainer'
-      );
+      sections = document.querySelectorAll('#Home, #About, #Profile, #Works, #Contact');
     }
     if (!navItems) {
       navItems = document.querySelectorAll('#nav-home, #nav-about, #nav-profile, #nav-works, #nav-contact');
@@ -54,16 +58,18 @@ function App() {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       if (scrollTop >= sectionTop - sectionHeight / 2) {
-        current = section.getAttribute('class');
+        current = section.getAttribute('id');
       }
     });
     if (!current) return;
-    navItems.forEach((navItem) => {
-      navItem.classList.remove(`src-topnav-active`);
-      if (navItem.getAttribute('id') === current.split(' ')[1]) {
-        navItem.classList.add(`src-topnav-active`);
-      }
-    });
+
+    // navItems.forEach((navItem) => {
+    //   navItem.classList.remove(`src-topnav-active`);
+    //   if (navItem.getAttribute('id') === current.split(' ')[1]) {
+    //     navItem.classList.add(`src-topnav-active`);
+    //   }
+    // });
+    dispatch(setActivePage(current));
   }, 500);
   return (
     <div className={styles.container}>
@@ -93,4 +99,4 @@ function App() {
   );
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+// ReactDom.render(<App />, document.getElementById('root'));
