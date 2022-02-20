@@ -19,7 +19,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   optimization: {
-    // minimize our code.
+    // minimize code.
     minimize: true,
     minimizer: [new TerserPlugin()],
   },
