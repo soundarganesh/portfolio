@@ -35,7 +35,7 @@ export default function HomeComponent() {
 
   const onContactClick = () => {
     const scrollDiv = document.getElementById('mainContainer');
-    const targetElement = document.getElementById('contactContainer');
+    const targetElement = document.getElementById('Contact');
     if (scrollDiv) {
       scrollDiv.scrollTo({
         top: targetElement.offsetTop,
@@ -45,7 +45,7 @@ export default function HomeComponent() {
   };
   const onExploreClick = () => {
     const scrollDiv = document.getElementById('mainContainer');
-    const targetElement = document.getElementById('profileContainer');
+    const targetElement = document.getElementById('Profile');
     if (scrollDiv) {
       scrollDiv.scrollTo({
         top: targetElement.offsetTop - 70,
