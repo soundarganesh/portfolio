@@ -65,7 +65,7 @@ export default function App() {
     if (!current) return;
 
     dispatch(setActivePage(current));
-  }, 500);
+  }, 300);
   return (
     <div className={styles.container}>
       <div className={styles.topNav}>

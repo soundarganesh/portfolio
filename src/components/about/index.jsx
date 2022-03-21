@@ -3,9 +3,10 @@ import { gsap } from 'gsap';
 
 import { CardComponent } from '../../common/components/card';
 
-const Resume = React.lazy(
-  () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./resources/resume.pdf')), 4000))
-);
+import Resume from './resources/resume.pdf';
+// const Resume = React.lazy(
+//   () => new Promise((resolve, reject) => setTimeout(() => resolve(import('./resources/resume.pdf')), 4000))
+// );
 import styles from './about.css';
 
 export default function AboutComponent() {
